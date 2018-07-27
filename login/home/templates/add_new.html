@@ -1,0 +1,87 @@
+{% load static %}
+<html>
+<head>
+	<style type="text/css">
+		.outer
+		{
+			margin-top:10px;
+		}
+		.inner
+		{
+			margin-top:5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="row" w3-include-html="{% url 'base' %}"></div>
+	<center><h2>Enter Patient Details</h2></center>
+	<div class="row">
+		<div class= "col-lg-3"></div>
+		<div class="col-lg-6">
+			<form>
+				<div class="form-group">
+					<div class="form-group col-md-12">
+						<label for="patientid" class="outer">Patient ID</label>
+						<input class="form-control inner" id="patientid" aria-describedby="emailHelp" placeholder="Enter patient id">
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="firstname" class="outer">First Name</label>
+							<input class="form-control inner" id="firstname" aria-describedby="emailHelp" placeholder="Enter patient first name">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="lastname" class="outer">Last Name</label>
+							<input class="form-control inner" id="lastname" aria-describedby="emailHelp" placeholder="Enter patient last name">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12 outer">
+							<label for="gender">Gender</label>
+						</div>
+						<div class="col-md-1 inner"></div>
+						<div class="col-md-3 inner">
+							<div class="custom-control custom-radio">
+								<input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+								<label class="custom-control-label" for="customRadio1">Male</label>
+							</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+								<label class="custom-control-label" for="customRadio2">Female</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12 outer">
+							<label for="gender">Choose Image to Upload</label>
+						</div>
+						<div class="col-md-1 inner"></div>
+						<div class="col-md-8 inner">
+							<div class="custom-file-lg">
+							  <input type="file" class="custom-file-input" id="customFile" size="1000px"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12 outer">
+							<label for="gender">Type of Medical Image</label>
+						</div>
+						<div class="col-md-1 inner"></div>
+						<div class="col-md-8 inner">
+							<select class="form-control custom-select">
+								<option selected>Choose the type of Image</option>
+								<option value="1">Lung X Ray</option>
+								<option value="2">CT Scan</option>
+								<option value="3">Chest X Ray</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="{% static 'js/include.js' %}"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+</body>
+</html>

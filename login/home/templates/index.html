@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+<head>
+</head>
+<body>
+	<div class="row" w3-include-html="{% url 'base' %}"></div>
+	<ul class="nav nav-tabs" style="margin-left:5px;">
+	  <li class="nav-item">
+	    <a class="nav-link active" href="#">Patient Records</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="#">X Ray</a>
+	  </li>
+	</ul>
+	<script src="{% static 'js/include.js' %}"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+</body>
+</html>
