@@ -6,12 +6,20 @@
 	<div class="row" w3-include-html="{% url 'base' %}"></div>
 	<ul class="nav nav-tabs" style="margin-left:5px;">
 	  <li class="nav-item">
-	    <a class="nav-link active" href="#">Patient Records</a>
+	    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#patient" role="tab" aria-controls="nav-home" aria-selected="true">Patient Records</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="#">X Ray</a>
+	    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#xray" role="tab" aria-controls="nav-profile" aria-selected="false">X Ray</a>
 	  </li>
 	</ul>
+	<div class="tab-content">
+	  <div id="patient" class="tab-pane fade in active">
+	    <h3>HOME</h3>
+	  </div>
+	  <div id="xray" class="tab-pane fade">
+	    <h3>Menu 1</h3>
+	  </div>
+	</div>
 	<script src="{% static 'js/include.js' %}"></script>
     <script>
         w3IncludeHTML();
